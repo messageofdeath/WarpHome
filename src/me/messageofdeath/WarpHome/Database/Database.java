@@ -59,4 +59,14 @@ public class Database {
 			this.saveWarp(warp);
 		}
 	}
+	
+	public void deleteWarp(Warp warp) {
+		this.db.set("warps." + warp.getName(), "");
+	}
+	
+	public void deleteHome(Home home) {
+		String prefix = "homes." + home.getUUID().toString() + "." + home.getHomeName() + ".";
+		this.db.set(prefix + "isDefault", "");
+		this.db.set(prefix + "Location", "");
+	}
 }
