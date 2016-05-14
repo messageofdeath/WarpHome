@@ -10,15 +10,15 @@ public class Warp {
 	private double x, y, z; 
 	private float yaw, pitch;
 	
-	public Warp(JavaPlugin plugin, String name, String world, double x, double y, double z, float yaw, float pitch) {
+	public Warp(JavaPlugin plugin, String name, Location loc) {
 		this.plugin = plugin;
 		this.name = name;
-		this.world = world;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		this.yaw = yaw;
-		this.pitch = pitch;
+		this.world = loc.getWorld().getName();
+		this.x = loc.getX();
+		this.y = loc.getY();
+		this.z = loc.getZ();
+		this.yaw = loc.getYaw();
+		this.pitch = loc.getPitch();
 	}
 	
 	public String getName() {
