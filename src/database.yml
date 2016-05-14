@@ -1,0 +1,7 @@
+warps:
+    Test:
+homes:
+    messageofdeath:
+        Test:
+            isDefault: true
+            Location: world,12,12,12,45,45
